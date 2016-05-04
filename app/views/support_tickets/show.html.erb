@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @support_ticket.email %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @support_ticket.title %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @support_ticket.message %>
+</p>
+
+<%= link_to 'Edit', edit_support_ticket_path(@support_ticket) %> |
+<%= link_to 'Back', support_tickets_path %>

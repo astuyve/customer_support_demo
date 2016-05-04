@@ -1,0 +1,29 @@
+<%= form_for(@support_ticket) do |f| %>
+  <% if @support_ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@support_ticket.errors.count, "error") %> prohibited this support_ticket from being saved:</h2>
+
+      <ul>
+      <% @support_ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

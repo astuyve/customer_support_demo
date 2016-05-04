@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Support Tickets</h1>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Message</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_tickets.each do |support_ticket| %>
+      <tr>
+        <td><%= support_ticket.email %></td>
+        <td><%= support_ticket.title %></td>
+        <td><%= support_ticket.message %></td>
+        <td><%= link_to 'Show', support_ticket, class: 'btn btn-success btn-small' %></td>
+        <td><%= link_to 'Edit', edit_support_ticket_path(support_ticket), class: 'btn btn-warning btn-small' %></td>
+        <td><%= link_to 'Destroy', support_ticket, class: 'btn btn-danger btn-small', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Support ticket', new_support_ticket_path, class: 'btn btn-primary' %>
