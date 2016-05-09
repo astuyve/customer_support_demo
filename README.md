@@ -4,7 +4,7 @@ This is a vanilla rails 4 application, created with scaffold and bootstrap, desi
 
 I'm following a very simple blog post written by @pete2786, which you can find here: http://pete2786.github.io/2015/08/10/ruby-slack-notifier.html
 
-We're using the `slack-notifiable` gem available here: https://github.com/stevenosloan/slack-notifier
+We're using the `slack-notifier` gem available here: https://github.com/stevenosloan/slack-notifier
 
 # Quick steps
 1. Include `slack-notifier` in your `Gemfile` and `bundle`.
