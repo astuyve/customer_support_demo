@@ -1,1 +1,1 @@
-SLACK_WEBHOOK = '[your webook URL]'
+SLACK_WEBHOOK = '[your webhook URL]'
